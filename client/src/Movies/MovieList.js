@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory, useParams} from 'react-router-dom'
+import {useHistory, useParams, useRouteMatch} from 'react-router-dom'
 
 export default function MovieList(props) {
 
@@ -16,8 +16,7 @@ function MovieDetails(props) {
   const { title, director, metascore } = props.movie;
 
   const history = useHistory()
-  const {movieId} = useParams();
-
+  
   const routeToMovie = () => {
     history.push(`/movie/${props.movie.id}`)
   }
