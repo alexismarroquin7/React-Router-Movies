@@ -16,9 +16,9 @@ function MovieDetails(props) {
   const { title, director, metascore } = props.movie;
 
   const history = useHistory()
-  
+
   const routeToMovie = () => {
-    history.push(`/movie/${props.movie.id}`)
+    history.push(`/movies/${props.movie.id}`)
   }
 
   return (
